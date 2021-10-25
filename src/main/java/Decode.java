@@ -18,4 +18,54 @@ public class Decode {
         System.out.println(" Decrypted Text : " + decoding(stringToBeDecrypted, key));
         scan.close();
     }
+
+//    The return type is a String of decoded characters
+    public static String decoding( String stringToBeDecrypted, int decryptionKey){
+
+//       String to be returned, in decrypted form.
+        String decryptedString ="";
+
+//        Introduce loop to iterate for each stringToBeDecrypted character.
+        for (int i=0; i<stringToBeDecrypted.length(); i++){
+            char singleCharacter = stringToBeDecrypted.charAt(i);
+
+//            If singleCharacter is a letter
+            if (Character.isLetter(singleCharacter)){
+
+//               Lowercase.
+                if (Character.isLowerCase(singleCharacter)){
+
+//                   Create a new decoded character, using casting.
+                    char decodedSingleCharacter = (char)(singleCharacter-decryptionKey);
+
+//                   Make sure the encoded character falls within the uppercase alphabet bounds of ASCII.
+                    if (decodedSingleCharacter<'a'){
+                        decryptedString += (char)(singleCharacter-(decryptionKey-26));
+                    }else{
+                        decryptedString += decodedSingleCharacter;
+                    }
+                }
+
+//               Uppercase.
+                else if (Character.isUpperCase(singleCharacter)){
+//                   Create a new decoded character, using casting.
+                    char decodedSingleCharacter = (char)(singleCharacter-decryptionKey);
+
+//                   Make sure the encoded character falls within the uppercase alphabet bounds of ASCII.
+                    if (decodedSingleCharacter<'A'){
+                        decryptedString += (char)(singleCharacter-(decryptionKey-26));
+                    }else{
+                        decryptedString += decodedSingleCharacter;
+                    }
+                }
+
+            }
+
+//           If singleCharacter is not a letter, push that character into encryptedString.
+            else {
+                decryptedString += singleCharacter;
+            }
+        }
+        return decryptedString;
+    }
 }

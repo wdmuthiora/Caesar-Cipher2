@@ -19,6 +19,7 @@ class Encode {
         scan.close();
     }
 
+//    The return type is a String of encoded characters.
     private static String encoding(String stringToBeEncrypted, int encryptionKey) {
 
 //        String to be returned, in encrypted form.
@@ -44,12 +45,14 @@ class Encode {
                         encryptedString += encodedSingleCharacter;
                     }
                 }
+
+//                   Make sure the encoded character falls within the uppercase alphabet bounds of ASCII.
                 else if (Character.isUpperCase(singleCharacter)){
 
 //                   Create a new encoded character, using casting.
                     char encodedSingleCharacter = (char)(singleCharacter+encryptionKey);
 
-//                   Make sure the encoded character falls within the lowercase alphabet bounds of ASCII.
+//                   Make sure the encoded character falls within the uppercase alphabet bounds of ASCII.
                     if (encodedSingleCharacter>'Z'){
                         encryptedString += (char)(singleCharacter-(26-encryptionKey));
                     }else{
