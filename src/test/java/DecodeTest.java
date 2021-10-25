@@ -7,4 +7,5 @@ class DecodeTest {
     public void newDecode_instantiatesCorrectly(){
         Decode decode = new Decode();
     }
+
 }
