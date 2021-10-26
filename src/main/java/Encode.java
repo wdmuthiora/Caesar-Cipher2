@@ -19,7 +19,7 @@ class Encode {
         scan.close();
     }
 
-//    The return type is a String of encoded characters.
+//    The return type for this method is a String of encoded characters.
     private static String encoding(String stringToBeEncrypted, int encryptionKey) {
 
 //        String to be returned, in encrypted form.

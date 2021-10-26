@@ -19,7 +19,7 @@ public class Decode {
         scan.close();
     }
 
-//    The return type is a String of decoded characters
+//    The return type of this method is a String of decoded characters
     public static String decoding( String stringToBeDecrypted, int decryptionKey){
 
 //       String to be returned, in decrypted form.

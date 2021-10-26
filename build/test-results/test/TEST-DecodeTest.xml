@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DecodeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-25T10:24:15" hostname="Muthiora" time="0.02">
+<testsuite name="DecodeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-25T19:24:51" hostname="Muthiora" time="0.03">
   <properties/>
-  <testcase name="newDecode_instantiatesCorrectly()" classname="DecodeTest" time="0.02"/>
+  <testcase name="Decode Instantiates Correctly." classname="DecodeTest" time="0.03"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
